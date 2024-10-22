@@ -1,19 +1,23 @@
-import { Col, Container, Image, Row } from 'react-bootstrap';
+'use client';
 
-/** The Home page. */
-const Home = () => (
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css';
+import { Container } from 'react-bootstrap';
+import TopMenu from '@/components/TopMenu';
+import IslandSnowLogo from '@/components/IslandSnowLogo';
+import MiddleMenu from '@/components/MiddleMenu';
+import FullWidthImage from '@/components/FullWidthImage';
+import FooterMenu from '@/components/FooterMenu';
+
+const Home: React.FC = () => (
   <main>
-    <Container id="landing-page" fluid className="py-3">
-      <Row className="align-middle text-center">
-        <Col xs={4}>
-          <Image src="next.svg" width="150px" alt="" />
-        </Col>
-
-        <Col xs={8} className="d-flex flex-column justify-content-center">
-          <h1>Welcome to this template</h1>
-          <p>Now get to work and modify this app!</p>
-        </Col>
-      </Row>
+    <Container>
+      <TopMenu />
+      <IslandSnowLogo imgUrl="https://pbs.twimg.com/profile_images/580543396592386048/BXO_oJGv_400x400.jpg" />
+      <MiddleMenu />
+      <FullWidthImage />
+      <FooterMenu />
     </Container>
   </main>
 );
